@@ -6,7 +6,8 @@ Considering the definition of a list in Prolog, write Prolog programs for the fo
 predicates and make the deduction of the indicated goals.
 
 1- Predicate first(X, Y) where X is the head of list Y
-Goal: first(a, Y)
+Goal1: first(X, mylist(a, mylist(b, mylist(c, empty)))). % An "invented" syntax for lists
+Goal2: first(X, [a, b, c]).
 
 2- Predicate tail(X, Y) where X is the tail of list Y
 Goal1: tail(X, mylist(a, mylist(b, mylist(c, empty)))). % An "invented" syntax for lists
