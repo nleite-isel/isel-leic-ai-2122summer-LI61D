@@ -21,7 +21,7 @@ best( [Pos1 | PosList], BestPos, BestVal) :-
 betterof( Pos0, Val0, Pos1, Val1, Pos0, Val0) :- % Pos0 better than Pos1
 	min_to_move( Pos0),     % MIN to move in Pos0
 	Val0 > Val1, !          % MAX prefers the greater value
-	; Or 
+	; % Or 
 	max_to_move( Pos0),     % MAX to move in Pos0
 	Val0 < Val1, !.         % MIN prefers the lesser value
 
