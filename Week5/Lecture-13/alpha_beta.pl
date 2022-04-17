@@ -2,7 +2,7 @@
 
 alphabeta( Pos, Alpha, Beta, GoodPos, Val) :-
 	moves( Pos, PosList), !,
-	boundedbest( Poslist, Alpha, Beta, GoodPos, Val)
+	boundedbest( PosList, Alpha, Beta, GoodPos, Val)
 	; % Or
 	staticval( Pos, Val).       % Static value of Pos
 	
