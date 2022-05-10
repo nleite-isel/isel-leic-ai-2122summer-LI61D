@@ -36,7 +36,7 @@ expand(P, l(N, F/G), Bound, Tree1, Solved, Sol) :-
 %
 expand( P, t(N, F/G, [T | Ts]), Bound, Tree1, Solved, Sol) :-
 	F =< Bound,
-	bestf( Ts, BF), min( Bound, BF, Bound1), % Bound1 = min( Bound, BF)
+	bestf(Ts, BF), Bound1 = min( Bound, BF), % min( Bound, BF, Bound1) does not work in SWI-Prolog
 	expand( [N | P], T, Bound1, T1, Solved1, Sol),
 	continue( P, t(N, F/G, [T1 | Ts]), Bound, Tree1, Solved1, Solved, Sol).
 
