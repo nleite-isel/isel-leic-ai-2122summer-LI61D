@@ -8,6 +8,7 @@ function plots
     y = x.^3 - 60 * x.^2 + 900 * x + 100;
     figure(1);
     plot(x, y);
+    max = max(y)
     %/////////////////////////////////////////////////////
     
     %/////////////////////////////////////////////////////
@@ -15,7 +16,8 @@ function plots
     % Plot cooling rate (exponential) function
     %
     %tmax = 1e3;
-    tmax = 1e5;
+    %tmax = 1e5;
+    tmax = 1e6;
     % Rate increment variable
     t = 0 : tmax;
     %
